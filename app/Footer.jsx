@@ -279,12 +279,12 @@ const SoftwareFooter = () => {
               </h4>
               <nav className="space-y-3">
                 {[
-                  { name: "About Us", href: "#" },
+                  { name: "About", href: "#" },
                   { name: "Services", href: "#" },
                   { name: "Careers", href: "#" },
                   { name: "Courses", href: "#" },
                   { name: "Blog", href: "#" },
-                  { name: "Contact Us", href: "#" },
+                  { name: "Contact", href: "#" },
                 ].map((link, index) => (
                   <a
                     key={index}
@@ -315,7 +315,7 @@ const SoftwareFooter = () => {
                 <div className="contact-item flex items-center space-x-3">
                   <FaPhone className="flex-shrink-0" style={{ color: "#00FF85" }} />
                   <div>
-                    <p className="text-sm">+1 (555) 123-4567</p>
+                    <p className="text-sm">+94 76 449 2334</p>
                   </div>
                 </div>
                 
@@ -373,7 +373,7 @@ const SoftwareFooter = () => {
             <div className="flex flex-col md:flex-row items-center justify-between space-y-4 md:space-y-0">
               <div className="flex items-center space-x-4">
                 <p className="text-sm opacity-80">
-                  © 2024 Web Doctor Labs. All rights reserved.
+                  © 2025 Web Doctor Labs. All rights reserved.
                 </p>
                 <div className="hidden md:flex items-center space-x-1 text-sm">
                   <span>Made with</span>

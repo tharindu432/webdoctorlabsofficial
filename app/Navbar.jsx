@@ -36,22 +36,22 @@ const SoftwareNavbar = () => {
 
   const menuItems = [
     { name: 'Home', icon: FaHome, href: '#' },
-    { name: 'About Us', icon: FaInfoCircle, href: '#' },
+    { name: 'About', icon: FaInfoCircle, href: '#' },
     { 
       name: 'Services', 
       icon: FaLaptopCode, 
       href: '#',
-      dropdown: ['Web Development', 'App Development', 'UI/UX Design', 'Cloud Solutions', 'Automation']
+      // dropdown: ['Web Development', 'App Development', 'UI/UX Design', 'Cloud Solutions', 'Automation']
     },
     { name: 'Careers', icon: FaBriefcase, href: '#' },
     { 
       name: 'Courses', 
       icon: FaUserGraduate, 
       href: '#',
-      dropdown: ['Frontend Bootcamp', 'Backend Bootcamp', 'DevOps', 'AI & ML', 'Cybersecurity']
+      // dropdown: ['Frontend Bootcamp', 'Backend Bootcamp', 'DevOps', 'AI & ML', 'Cybersecurity']
     },
     { name: 'Blog', icon: FaBlog, href: '#' },
-    { name: 'Contact Us', icon: FaPhone, href: '#' }
+    // { name: 'Contact', icon: FaPhone, href: '#' }
   ];
 
   return (
@@ -295,7 +295,7 @@ const SoftwareNavbar = () => {
             </div>
 
             {/* Desktop Navigation */}
-            <div className="hidden lg:flex items-center space-x-2">
+            <div className="hidden lg:flex items-center space-x-4">
               {menuItems.map((item, index) => (
                 <div 
                   key={index} 
@@ -330,9 +330,9 @@ const SoftwareNavbar = () => {
             {/* CTA Button & Mobile Menu Toggle */}
             <div className="flex items-center space-x-4">
               {/* CTA Button - Hidden on mobile */}
-              <button className="hidden md:flex items-center space-x-2 px-6 py-2 rounded-full cta-button font-medium">
-                <FaEnvelope className="text-sm" />
-                <span>Get a Quote</span>
+              <button className="hidden md:flex items-center space-x-2 px-7 py-2 rounded-full cta-button font-medium">
+                <FaPhone className="text-sm" />
+                <span>Contact</span>
               </button>
 
               {/* Mobile Menu Button */}
