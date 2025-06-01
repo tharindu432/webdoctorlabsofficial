@@ -571,6 +571,6 @@ const SoftwareCompanyPage = () => {
       <Footer />
     </div>
   );
-};
+}; 
 
 export default SoftwareCompanyPage;
