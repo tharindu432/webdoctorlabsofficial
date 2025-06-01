@@ -1,4 +1,5 @@
 "use client";
+import Link from 'next/link';
 import React, { useEffect, useState } from "react";
 import { 
   FaBars, 
@@ -35,22 +36,22 @@ const SoftwareNavbar = () => {
   }, []);
 
   const menuItems = [
-    { name: 'Home', icon: FaHome, href: '#' },
-    { name: 'About', icon: FaInfoCircle, href: '#' },
+    { name: 'Home', icon: FaHome, href: '/' },
+    { name: 'About', icon: FaInfoCircle, href: '/about' },
     { 
       name: 'Services', 
       icon: FaLaptopCode, 
-      href: '#',
+      href: '/services',
       // dropdown: ['Web Development', 'App Development', 'UI/UX Design', 'Cloud Solutions', 'Automation']
     },
-    { name: 'Careers', icon: FaBriefcase, href: '#' },
+    { name: 'Careers', icon: FaBriefcase, href: '/careers' },
     { 
       name: 'Courses', 
       icon: FaUserGraduate, 
-      href: '#',
+      href: '/courses',
       // dropdown: ['Frontend Bootcamp', 'Backend Bootcamp', 'DevOps', 'AI & ML', 'Cybersecurity']
     },
-    { name: 'Blog', icon: FaBlog, href: '#' },
+    { name: 'Blog', icon: FaBlog, href: '/blog' },
     // { name: 'Contact', icon: FaPhone, href: '#' }
   ];
 
@@ -332,7 +333,7 @@ const SoftwareNavbar = () => {
               {/* CTA Button - Hidden on mobile */}
               <button className="hidden md:flex items-center space-x-2 px-7 py-2 rounded-full cta-button font-medium">
                 <FaPhone className="text-sm" />
-                <span>Contact</span>
+                <a href='/contact'>Contact</a>
               </button>
 
               {/* Mobile Menu Button */}

@@ -279,12 +279,12 @@ const SoftwareFooter = () => {
               </h4>
               <nav className="space-y-3">
                 {[
-                  { name: "About", href: "#" },
-                  { name: "Services", href: "#" },
-                  { name: "Careers", href: "#" },
-                  { name: "Courses", href: "#" },
-                  { name: "Blog", href: "#" },
-                  { name: "Contact", href: "#" },
+                  { name: "About", href: "/about" },
+                  { name: "Services", href: "/services" },
+                  { name: "Careers", href: "/careers" },
+                  { name: "Courses", href: "courses" },
+                  { name: "Blog", href: "/blog" },
+                  { name: "Contact", href: "/contact" },
                 ].map((link, index) => (
                   <a
                     key={index}
