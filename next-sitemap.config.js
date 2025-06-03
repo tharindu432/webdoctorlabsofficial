@@ -1,9 +1,10 @@
 /** @type {import('next-sitemap').IConfig} */
 module.exports = {
-  siteUrl: 'https://yourdomain.com',
-  generateRobotsTxt: true, // Generates robots.txt file
+  siteUrl: 'https://webdoctorlabs.com',
+  generateRobotsTxt: true,
+  generateIndexSitemap: true,
+  sitemapSize: 7000,
   changefreq: 'daily',
   priority: 0.7,
-  sitemapSize: 5000,
-  exclude: ['/private-page'],
+  exclude: ['/admin'], // optional
 };
