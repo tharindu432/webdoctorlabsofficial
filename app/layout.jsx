@@ -1,3 +1,4 @@
+import Head from 'next/head';
 import React from "react";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
@@ -40,7 +41,7 @@ export const metadata = {
         height: 630,
         alt: "Web Doctor Labs",
       },
-    ],
+    ]
   },
   twitter: {
     card: "summary_large_image",
@@ -55,6 +56,21 @@ export const metadata = {
 
 const RootLayout = ({ children }) => (
   <html lang="en">
+    <Head>
+        {/* Site Name Structured Data */}
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify({
+              "@context": "https://schema.org",
+              "@type": "WebSite",
+              "name": "Web Doctor Labs",
+              "alternateName": "WebDoctorLabs",
+              "url": "https://webdoctorlabs.com"
+            }),
+          }}
+        />
+      </Head>
     <body className={`${geistSans.variable} ${geistMono.variable} antialiased`}>
       {children}
     </body>
