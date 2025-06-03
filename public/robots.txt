@@ -1,0 +1,9 @@
+# *
+User-agent: *
+Allow: /
+
+# Host
+Host: https://webdoctorlabs.com
+
+# Sitemaps
+Sitemap: https://webdoctorlabs.com/sitemap.xml
