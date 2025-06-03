@@ -272,7 +272,7 @@ const ContactPage = () => {
             </button>
           </form>
           <div className="mt-8 text-sm" style={{ color: "#1E90FF" }}>
-            Or email us at <a href="mailto:hello@webdoctorlabs.com" style={{ color: "#FF0099" }}>hello@webdoctorlabs.com</a>
+            Or email us at <a href="mailto:hello@webdoctorlabs.com" style={{ color: "#FF0099" }}>info@webdoctorlabs.com</a>
           </div>
         </div>
       </section>
