@@ -17,6 +17,10 @@ export const metadata = {
   title: "Web Doctor Labs – Custom Software & AI Solutions",
   description:
     "Building future-ready web, mobile, and AI solutions for startups and enterprises. Trusted innovation partner worldwide.",
+    icons: {
+    icon: '/favicon.png', // Use .png instead of .ico
+  },
+
   keywords: [
     "Web Doctor Labs",
     "custom software development",
@@ -36,7 +40,7 @@ export const metadata = {
     type: "website",
     images: [
       {
-        url: "https://webdoctorlabs.com/og-image.jpg", // replace with your OG image
+        url: "https://webdoctorlabs.com/wdl.png", // replace with your OG image
         width: 1200,
         height: 630,
         alt: "Web Doctor Labs",
