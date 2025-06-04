@@ -11,7 +11,8 @@ import {
   FaMapMarkerAlt,
   FaArrowUp,
   FaHeart,
-  FaStar
+  FaStar,
+  FaWhatsapp
 } from "react-icons/fa";
 
 const SoftwareFooter = () => {
@@ -254,15 +255,17 @@ const SoftwareFooter = () => {
                 </h4>
                 <div className="flex space-x-4">
                   {[
-                    { icon: FaFacebookF, color: "#1E90FF" },
-                    { icon: FaInstagram, color: "#FF0099" },
-                    { icon: FaTwitter, color: "#00FF85" },
-                    { icon: FaLinkedinIn, color: "#1E90FF" },
-                    { icon: FaYoutube, color: "#FF0099" }
+                    // { icon: FaFacebookF, color: "#1E90FF" },
+                    { icon: FaLinkedinIn, color: "#1E90FF",link:"https://www.linkedin.com/company/webdoctorlabs/" },
+                    { icon: FaInstagram, color: "#FF0099",link:"https://www.instagram.com/webdoctorlabs?igsh=MWZrY243cmpmY3g2cQ==" },
+                    // { icon: FaTwitter, color: "#00FF85" },
+                    
+                    // { icon: FaYoutube, color: "#FF0099" }
                   ].map((social, index) => (
                     <a
                       key={index}
-                      href="#"
+                      href={social.link}
+                      target="_blank"
                       className="w-12 h-12 rounded-full backdrop-blur social-icon flex items-center justify-center"
                     >
                       <social.icon style={{ color: social.color, fontSize: "1.1rem" }} />
@@ -308,21 +311,34 @@ const SoftwareFooter = () => {
                   <FaMapMarkerAlt className="mt-1 flex-shrink-0" style={{ color: "#00FF85" }} />
                   <div>
                     <p className="text-sm font-medium">Head Office</p>
-                    <p className="text-sm opacity-90">42 Innovation Drive, Silicon City, Techland</p>
+                    <p className="text-sm opacity-90">Colombo 04, Sri Lanka</p>
                   </div>
                 </div>
                 
                 <div className="contact-item flex items-center space-x-3">
                   <FaPhone className="flex-shrink-0" style={{ color: "#00FF85" }} />
                   <div>
-                    <p className="text-sm">+94 76 449 2334</p>
+                    <a href="tel:+94764492334" className="text-sm">
+                    <p className="text-sm">+94 76 449 2334 (Hotline)</p>
+                    </a>
+                  </div>
+                </div>
+
+                <div className="contact-item flex items-center space-x-3">
+                  <FaWhatsapp className="flex-shrink-0" style={{ color: "#00FF85" }} />
+                  <div>
+                    <a href="https://wa.me/94771234567" target="_blank" rel="noopener noreferrer">
+                    <p className="text-sm">+94 72 106 8722 (Whatsapp)</p>
+                    </a>
                   </div>
                 </div>
                 
                 <div className="contact-item flex items-center space-x-3">
                   <FaEnvelope className="flex-shrink-0" style={{ color: "#00FF85" }} />
                   <div>
-                    <p className="text-sm">hello@webdoctorlabs.com</p>
+                    <a href="mailto:info@webdoctorlabs.com">
+                    <p className="text-sm">info@webdoctorlabs.com</p>
+                    </a>
                   </div>
                 </div>
               </div>
@@ -349,7 +365,7 @@ const SoftwareFooter = () => {
               </div>
 
               {/* Awards/Certifications */}
-              <div className="pt-4">
+              {/* <div className="pt-4">
                 <p className="text-xs opacity-70 mb-2">Certified by:</p>
                 <div className="flex space-x-2">
                   <div className="w-12 h-8 bg-[#00FF8511] rounded border border-[#00FF8533] flex items-center justify-center">
@@ -359,7 +375,7 @@ const SoftwareFooter = () => {
                     <FaStar style={{ color: "#1E90FF", fontSize: "0.8rem" }} />
                   </div>
                 </div>
-              </div>
+              </div> */}
             </div>
           </div>
         </div>

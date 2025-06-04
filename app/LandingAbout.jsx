@@ -1,5 +1,5 @@
 "use client";
-import React, { useEffect, useState } from "react";
+import React, { useRef,useEffect, useState } from "react";
 import { 
   FaStar, 
   FaAward, 
@@ -18,6 +18,23 @@ import {
 const SoftwareAbout = () => {
   const [visibleElements, setVisibleElements] = useState(new Set());
   const [activeStats, setActiveStats] = useState(false);
+
+ const videoRef = useRef(null);
+const [isPlaying, setIsPlaying] = useState(false);
+const [showButton, setShowButton] = useState(false);
+
+const handlePlayPause = () => {
+  const video = videoRef.current;
+  if (!video) return;
+
+  if (video.paused) {
+    video.play();
+    setIsPlaying(true);
+  } else {
+    video.pause();
+    setIsPlaying(false);
+  }
+};
 
   useEffect(() => {
     const observer = new IntersectionObserver(
@@ -45,9 +62,9 @@ const SoftwareAbout = () => {
 
   // Software company stats
   const stats = [
-    { number: 200, suffix: '+', label: 'Clients Worldwide', icon: FaUsers },
-    { number: 10, suffix: '+', label: 'Years of Innovation', icon: FaAward },
-    { number: 40, suffix: '+', label: 'Expert Engineers', icon: FaCode },
+    { number: 10, suffix: '+', label: 'Clients Worldwide', icon: FaUsers },
+    { number: 2, suffix: '+', label: 'Years of Innovation', icon: FaAward },
+    { number: 10, suffix: '+', label: 'Expert Engineers', icon: FaCode },
     { number: 4.9, suffix: '/5', label: 'Client Rating', icon: FaStar }
   ];
 
@@ -332,26 +349,37 @@ const SoftwareAbout = () => {
             
             {/* Image/Video Section */}
             <div 
-              id="about-image"
-              data-animate
-              className={`${visibleElements.has('about-image') ? 'animate-fade-in-left' : ''}`}
-            >
-              <div className="image-container">
-                <div className="gradient-border">
-                  <div className="gradient-border-inner">
-                    <img
-                      src="https://images.unsplash.com/photo-1519389950473-47ba0277781c?auto=format&fit=crop&w=800&q=80"
-                      alt="Web Doctor Labs Team at Work"
-                      className="w-full h-96 object-cover relative z-2"
-                    />
-                    {/* Play button overlay */}
-                    <div className="play-button">
-                      <FaPlay className="text-white text-xl ml-1" />
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
+  id="about-image"
+  data-animate
+  className={`${visibleElements.has('about-image') ? 'animate-fade-in-left' : ''}`}
+>
+  <div className="image-container">
+        <div className="gradient-border">
+ <div 
+  className="gradient-border-inner relative"
+  onMouseEnter={() => setShowButton(true)}
+  onMouseLeave={() => setShowButton(false)}
+>
+  <video
+    ref={videoRef}
+    src="/st.mp4"
+    className="w-full h-96 object-cover relative z-2"
+    poster="/favicon.png"
+  />
+  {showButton && (
+    <div
+      className="play-button absolute inset-0 flex items-center justify-center cursor-pointer z-10"
+      onClick={handlePlayPause}
+    >
+      <FaPlay className="text-white text-xl ml-1" />
+    </div>
+  )}
+</div>
+
+        </div>
+      </div>
+    </div>
+
 
             {/* Content Section */}
             <div className="space-y-8">

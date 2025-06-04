@@ -40,7 +40,7 @@ export const metadata = {
     type: "website",
     images: [
       {
-        url: "https://webdoctorlabs.com/wdl.png", // replace with your OG image
+        url: "https://webdoctorlabs.com/favicon.png", // replace with your OG image
         width: 1200,
         height: 630,
         alt: "Web Doctor Labs",
@@ -61,7 +61,7 @@ export const metadata = {
 const RootLayout = ({ children }) => (
   <html lang="en">
     <Head>
-        {/* Site Name Structured Data */}
+          <link rel="icon" href="/favicon.png" />
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{

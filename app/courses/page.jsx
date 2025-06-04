@@ -2,45 +2,52 @@
 import React, { useEffect, useState } from "react";
 import Navbar from "../Navbar";
 import Footer from "../Footer";
-import { FaReact, FaNodeJs, FaCloud, FaLock, FaRobot, FaDatabase } from "react-icons/fa";
+import { FaCode, FaNodeJs, FaCloud, FaLock, FaRobot, FaDatabase, FaReact } from "react-icons/fa";
 
 const courses = [
-  {
-    title: "Frontend Bootcamp",
-    desc: "Master React, TypeScript, and modern UI/UX design patterns.",
-    icon: <FaReact style={{ color: "#00FF85", fontSize: "2rem" }} />,
-    level: "Beginner to Advanced"
+   {
+    title: "React js for Inteviews",
+    desc: "Mastering React.js, hooks, state management, and component architecture and much more for interviews.",
+    icon: <FaReact style={{ color: "#1E90FF", fontSize: "2rem" }} />,
+    level: "All Levels"
   },
   {
-    title: "Backend Engineering",
-    desc: "Build scalable APIs with Node.js, Express, and databases.",
+    title: "Node js & MongoDB for Interviews",
+    desc: "Mastering Node.js, Express, REST API and backend development with MongoDB, Mongoose, and more for interviews.",
     icon: <FaNodeJs style={{ color: "#1E90FF", fontSize: "2rem" }} />,
+    level: "All Levels"
+  },
+   {
+    title: "Crack Any Software Engineering Interview",
+    desc: "OOP, Data Structures, Algorithms, Software Design Principles, Design Patterns, Hands on Coding Exercises and Mock Interviews",
+    icon: <FaCode style={{ color: "#00FF85", fontSize: "2rem" }} />,
     level: "Intermediate"
   },
+  //  {
+  //   title: "MongoDB for Interviews",
+  //   desc: "",
+  //   icon: <FaDatabase style={{ color: "#1E90FF", fontSize: "2rem" }} />,
+  //   level: "All Levels"
+  // },
   {
     title: "Cloud & DevOps",
     desc: "Learn AWS, Docker, CI/CD, and deployment best practices.",
     icon: <FaCloud style={{ color: "#00FF85", fontSize: "2rem" }} />,
     level: "All Levels"
   },
+  // {
+  //   title: "Digital Image Processing",
+  //   desc: "",
+  //   icon: <FaRobot style={{ color: "#1E90FF", fontSize: "2rem" }} />,
+  //   level: "Intermediate to Advanced"
+  // },
   {
-    title: "Cybersecurity Essentials",
-    desc: "Protect applications and infrastructure with modern security practices.",
-    icon: <FaLock style={{ color: "#FF0099", fontSize: "2rem" }} />,
-    level: "Beginner"
-  },
-  {
-    title: "AI & Machine Learning",
-    desc: "Hands-on projects in Python, ML algorithms, and real-world AI.",
-    icon: <FaRobot style={{ color: "#1E90FF", fontSize: "2rem" }} />,
-    level: "Intermediate to Advanced"
-  },
-  {
-    title: "Database Systems",
-    desc: "Design, query, and optimize SQL/NoSQL databases.",
+    title: "Database Management Systems for Interviews",
+    desc: "Design, query, Indexing, Transaction Processing, Concurrency Control and optimize SQL/NoSQL databases.",
     icon: <FaDatabase style={{ color: "#00FF85", fontSize: "2rem" }} />,
     level: "All Levels"
-  }
+  },
+   
 ];
 
 const CoursesPage = () => {

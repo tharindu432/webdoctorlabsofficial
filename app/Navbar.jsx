@@ -282,9 +282,13 @@ const SoftwareNavbar = () => {
             
             {/* Logo */}
             <div className="flex items-center space-x-3">
-              <div className="w-10 h-10 rounded-full bg-gradient-to-br from-[#00FF85] to-[#1E90FF] flex items-center justify-center shadow-lg">
-                <FaStar className="text-white text-lg" />
-              </div>
+              {/* <div className="w-15 h-15 rounded-full overflow-hidden shadow-lg">
+  <img
+    src="/favicon.png"  // Place your image in the /public folder
+    alt="Logo"
+    className="w-full h-full object-cover"
+  />
+</div> */}
               <div>
                 <h1 className="text-xl md:text-2xl logo">
                   Web Doctor Labs
@@ -333,7 +337,7 @@ const SoftwareNavbar = () => {
               {/* CTA Button - Hidden on mobile */}
               <button className="hidden md:flex items-center space-x-2 px-7 py-2 rounded-full cta-button font-medium">
                 <FaPhone className="text-sm" />
-                <a href='/contact'>Contact</a>
+                <a href='/contact'>Contact Us</a>
               </button>
 
               {/* Mobile Menu Button */}
@@ -390,10 +394,10 @@ const SoftwareNavbar = () => {
                 
                 {/* Mobile CTA */}
                 <div className="pt-4 border-t" style={{ borderColor: 'var(--accent-blue, #1E90FF)' }}>
-                  <button className="w-full flex items-center justify-center space-x-2 px-6 py-3 rounded-full cta-button font-medium">
-                    <FaEnvelope />
-                    <span>Request a Quote</span>
-                  </button>
+                  <a href='/contact' className="w-full flex items-center justify-center space-x-2 px-6 py-3 rounded-full cta-button font-medium">
+                     <FaPhone className="text-sm" />
+                    <span >Contact Us</span>
+                  </a>
                 </div>
               </div>
             </div>
