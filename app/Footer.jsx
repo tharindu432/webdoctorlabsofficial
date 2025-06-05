@@ -327,7 +327,7 @@ const SoftwareFooter = () => {
                 <div className="contact-item flex items-center space-x-3">
                   <FaWhatsapp className="flex-shrink-0" style={{ color: "#00FF85" }} />
                   <div>
-                    <a href="https://wa.me/94771234567" target="_blank" rel="noopener noreferrer">
+                    <a href="https://wa.me/94721068722" target="_blank" rel="noopener noreferrer">
                     <p className="text-sm">+94 72 106 8722 (Whatsapp)</p>
                     </a>
                   </div>
