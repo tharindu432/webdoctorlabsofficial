@@ -2,6 +2,7 @@
 import React, { useEffect, useState } from "react";
 import Navbar from '../Navbar'
 import Footer from "../Footer";
+import AdSenseAd from "../AdSenseAd";
 
 const AboutPage = () => {
   const [isLoaded, setIsLoaded] = useState(false);
@@ -235,6 +236,24 @@ const AboutPage = () => {
 
       <Navbar />
 
+      {/* Ad Placement - Top Banner */}
+      <section className="py-8 px-4 relative" style={{ paddingTop: '100px' }}>
+        <div className="container mx-auto max-w-6xl">
+          <AdSenseAd 
+            adSlot="1234567893"
+            adFormat="horizontal"
+            style={{
+              minHeight: '90px',
+              background: 'rgba(13, 13, 13, 0.5)',
+              border: '1px solid rgba(30, 144, 255, 0.2)',
+              borderRadius: '12px',
+              padding: '10px',
+              backdropFilter: 'blur(10px)'
+            }}
+          />
+        </div>
+      </section>
+
       <section className="relative h-[100vh] flex items-center justify-center overflow-hidden">
         <div className="relative z-10 px-4 container mx-auto max-w-3xl flex flex-col items-center justify-center text-center">
           <h2 className={`text-4xl font-bold mb-6 text-glow ${isLoaded ? 'animate-fade-in-up stagger-1' : ''}`}
@@ -266,6 +285,24 @@ const AboutPage = () => {
               Contact Us
             </a>
           </div>
+        </div>
+      </section>
+
+      {/* Ad Placement - Bottom Banner */}
+      <section className="py-8 px-4 relative">
+        <div className="container mx-auto max-w-6xl">
+          <AdSenseAd 
+            adSlot="1234567894"
+            adFormat="auto"
+            style={{
+              minHeight: '250px',
+              background: 'rgba(13, 13, 13, 0.5)',
+              border: '1px solid rgba(0, 255, 133, 0.2)',
+              borderRadius: '12px',
+              padding: '10px',
+              backdropFilter: 'blur(10px)'
+            }}
+          />
         </div>
       </section>
 
