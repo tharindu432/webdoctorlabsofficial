@@ -73,7 +73,11 @@ const RootLayout = ({ children }) => (
               "url": "https://webdoctorlabs.com"
             }),
           }}
+          async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4426581172266577"
+     crossorigin="anonymous"
         />
+        
+        
       </Head>
     <body className={`${geistSans.variable} ${geistMono.variable} antialiased`}>
       {children}
