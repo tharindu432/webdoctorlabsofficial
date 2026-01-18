@@ -2,6 +2,7 @@
 import React, { useEffect, useState } from "react";
 import Navbar from "../Navbar";
 import Footer from "../Footer";
+import AdSenseAd from "../AdSenseAd";
 
 const posts = [
   {
@@ -256,6 +257,24 @@ const BlogPage = () => {
 
       <Navbar />
 
+      {/* Ad Placement - Top Banner */}
+      <section className="py-8 px-4 relative" style={{ paddingTop: '100px' }}>
+        <div className="container mx-auto max-w-6xl">
+          <AdSenseAd 
+            adSlot="1234567899"
+            adFormat="horizontal"
+            style={{
+              minHeight: '90px',
+              background: 'rgba(13, 13, 13, 0.5)',
+              border: '1px solid rgba(30, 144, 255, 0.2)',
+              borderRadius: '12px',
+              padding: '10px',
+              backdropFilter: 'blur(10px)'
+            }}
+          />
+        </div>
+      </section>
+
       <section className="relative min-h-[100vh] flex flex-col items-center justify-center py-24 px-4">
         <div className="relative z-10 container mx-auto max-w-4xl text-center">
           <h2 className={`text-4xl font-bold mb-8 text-glow ${isLoaded ? 'animate-fade-in-up stagger-1' : ''}`}
@@ -283,6 +302,25 @@ const BlogPage = () => {
           </div>
         </div>
       </section>
+
+      {/* Ad Placement - Bottom Banner */}
+      <section className="py-8 px-4 relative">
+        <div className="container mx-auto max-w-6xl">
+          <AdSenseAd 
+            adSlot="1234567900"
+            adFormat="auto"
+            style={{
+              minHeight: '250px',
+              background: 'rgba(13, 13, 13, 0.5)',
+              border: '1px solid rgba(0, 255, 133, 0.2)',
+              borderRadius: '12px',
+              padding: '10px',
+              backdropFilter: 'blur(10px)'
+            }}
+          />
+        </div>
+      </section>
+
       <Footer />
     </div>
   );

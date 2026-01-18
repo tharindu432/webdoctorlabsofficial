@@ -12,6 +12,7 @@ import {
 import Navbar from "./Navbar";
 import Footer from "./Footer";
 import LandingAbout from "./LandingAbout";
+import AdSenseAd from "./AdSenseAd";
 
 const SoftwareCompanyPage = () => {
   const [isLoaded, setIsLoaded] = useState(false);
@@ -367,6 +368,24 @@ const SoftwareCompanyPage = () => {
              style={{ background: "radial-gradient(circle, #00FF85 0%, transparent 70%)", animationDelay: '1s' }}></div>
       </section>
 
+      {/* Ad Placement 1 - Horizontal Banner after Hero */}
+      <section className="py-8 px-4 relative">
+        <div className="container mx-auto max-w-6xl">
+          <AdSenseAd 
+            adSlot="1234567890"
+            adFormat="horizontal"
+            style={{
+              minHeight: '90px',
+              background: 'rgba(13, 13, 13, 0.5)',
+              border: '1px solid rgba(30, 144, 255, 0.2)',
+              borderRadius: '12px',
+              padding: '10px',
+              backdropFilter: 'blur(10px)'
+            }}
+          />
+        </div>
+      </section>
+
       {/* About Section with scroll animation */}
       <div 
         id="about-section"
@@ -481,6 +500,24 @@ const SoftwareCompanyPage = () => {
         </div>
       </section>
 
+      {/* Ad Placement 2 - Display Ad between Services and Technologies */}
+      <section className="py-8 px-4 relative">
+        <div className="container mx-auto max-w-6xl">
+          <AdSenseAd 
+            adSlot="1234567891"
+            adFormat="auto"
+            style={{
+              minHeight: '250px',
+              background: 'rgba(13, 13, 13, 0.5)',
+              border: '1px solid rgba(0, 255, 133, 0.2)',
+              borderRadius: '12px',
+              padding: '10px',
+              backdropFilter: 'blur(10px)'
+            }}
+          />
+        </div>
+      </section>
+
       {/* Technologies Section */}
       <section className="py-16 px-4 relative">
         <div className="container mx-auto max-w-6xl">
@@ -519,6 +556,24 @@ const SoftwareCompanyPage = () => {
               </div>
             ))}
           </div>
+        </div>
+      </section>
+
+      {/* Ad Placement 3 - Horizontal Banner before CTA */}
+      <section className="py-8 px-4 relative">
+        <div className="container mx-auto max-w-6xl">
+          <AdSenseAd 
+            adSlot="1234567892"
+            adFormat="horizontal"
+            style={{
+              minHeight: '90px',
+              background: 'rgba(13, 13, 13, 0.5)',
+              border: '1px solid rgba(255, 0, 153, 0.2)',
+              borderRadius: '12px',
+              padding: '10px',
+              backdropFilter: 'blur(10px)'
+            }}
+          />
         </div>
       </section>
 
