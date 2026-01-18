@@ -1,4 +1,5 @@
 import Head from 'next/head';
+import Script from 'next/script';
 import React from "react";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
@@ -61,24 +62,29 @@ export const metadata = {
 const RootLayout = ({ children }) => (
   <html lang="en">
     <Head>
-          <link rel="icon" href="/favicon.png" />
-        <script
-          type="application/ld+json"
-          dangerouslySetInnerHTML={{
-            __html: JSON.stringify({
-              "@context": "https://schema.org",
-              "@type": "WebSite",
-              "name": "Web Doctor Labs",
-              "alternateName": "WebDoctorLabs",
-              "url": "https://webdoctorlabs.com"
-            }),
-          }}
-          async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4426581172266577"
-     crossorigin="anonymous"
-        />
-        
-        
-      </Head>
+      <link rel="icon" href="/favicon.png" />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "WebSite",
+            "name": "Web Doctor Labs",
+            "alternateName": "WebDoctorLabs",
+            "url": "https://webdoctorlabs.com"
+          }),
+        }}
+      />
+    </Head>
+    
+    {/* Google AdSense Script */}
+    <Script
+      async
+      src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4426581172266577"
+      crossOrigin="anonymous"
+      strategy="afterInteractive"
+    />
+    
     <body className={`${geistSans.variable} ${geistMono.variable} antialiased`}>
       {children}
     </body>
