@@ -53,7 +53,7 @@ export const metadata = {
     description:
       "Custom software, AI, and web/mobile app development services.",
     creator: "@webdoctorlabs", // optional
-    images: ["https://webdoctorlabs.com/og-image.jpg"],
+    images: ["https://webdoctorlabs.com/favicon.png"],
   },
   metadataBase: new URL("https://webdoctorlabs.com"),
 };
